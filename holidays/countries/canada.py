@@ -321,12 +321,16 @@ class Canada(ObservedHolidayBase, ChristianHolidays, InternationalHolidays, Stat
     def _populate_subdiv_ns_public_holidays(self):
         # http://novascotia.ca/lae/employmentrights/NovaScotiaHeritageDay.asp
         if self._year >= 2015:
-            # Heritage Day.
+        # Heritage Day.
             self._add_holiday_3rd_mon_of_feb(tr("Heritage Day"))
 
         if self._year >= 1981:
             # Remembrance Day.
             self._add_observed(self._add_remembrance_day(tr("Remembrance Day")))
+
+        if self._year >= 1996:
+            # Natal Day.
+            self._add_holiday_1st_mon_of_aug(tr("Natal Day"))
 
     def _populate_subdiv_ns_optional_holidays(self):
         if self._year >= 1996:
