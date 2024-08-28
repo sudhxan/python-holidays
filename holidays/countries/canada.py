@@ -27,7 +27,7 @@ from holidays.observed_holiday_base import (
 )
 
 
-class Canada(ObservedHolidayBase, ChristianHolidays, InternationalHolidays, StaticHolidays):
+class Canada(ObservedHolidayBase, ChristianHolidays, InternationalHolidays): #Removed StaticHolidays
     """
     References:
         - https://en.wikipedia.org/wiki/Public_holidays_in_Canada
@@ -66,7 +66,7 @@ class Canada(ObservedHolidayBase, ChristianHolidays, InternationalHolidays, Stat
     def __init__(self, *args, **kwargs):
         ChristianHolidays.__init__(self)
         InternationalHolidays.__init__(self)
-        StaticHolidays.__init__(self, CanadaStaticHolidays)
+        #StaticHolidays.__init__(self, CanadaStaticHolidays)
         kwargs.setdefault("observed_rule", SAT_SUN_TO_NEXT_MON)
         super().__init__(*args, **kwargs)
 
@@ -510,30 +510,30 @@ class CAN(Canada):
     pass
 
 
-class CanadaStaticHolidays:
-    # Funeral of Queen Elizabeth II.
-    queen_funeral = tr("Funeral of Her Majesty the Queen Elizabeth II")
+# class CanadaStaticHolidays:
+#     # Funeral of Queen Elizabeth II.
+#     queen_funeral = tr("Funeral of Her Majesty the Queen Elizabeth II")
 
-    special_bc_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_bc_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
 
-    special_nb_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_nb_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
 
-    special_nl_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_nl_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
 
-    special_ns_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_ns_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
 
-    special_pe_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_pe_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
 
-    special_yt_public_holidays = {
-        2022: (SEP, 19, queen_funeral),
-    }
+#     special_yt_public_holidays = {
+#         2022: (SEP, 19, queen_funeral),
+#     }
